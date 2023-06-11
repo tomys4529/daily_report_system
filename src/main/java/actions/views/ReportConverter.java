@@ -48,8 +48,8 @@ public class ReportConverter {
                 r.getCreatedAt(),
                 r.getReportDate(),
                 r.getTitle(),
-                r.getUpdatedAt());
-                EmployeeConverter.toView(r.getEmployee());
+                r.getUpdatedAt(),
+                EmployeeConverter.toView(r.getEmployee()));
     }
 
     /**

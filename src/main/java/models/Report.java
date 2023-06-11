@@ -67,7 +67,7 @@ public class Report {
      */
 
     @Column(name = JpaConst.REP_COL_LEAVING_WORK, nullable = false)
-    private LocalDate leaving_work;
+    private String leaving_work;
 
     /**
      * 日報の内容

@@ -27,13 +27,13 @@ public class ReportView {
     /**
      * 出勤時間
      */
-    private Integer attendance_at_work;
+    private String attendance_at_work;
 
     /**
      * 退勤時間
      */
 
-    private Integer leaving_work;
+    private String leaving_work;
 
     /**
      * 日報の内容

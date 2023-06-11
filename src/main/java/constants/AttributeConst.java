@@ -51,7 +51,7 @@ REP_DATE("report_date"),
 REP_TITLE("title"),
 REP_CONTENT("content_msg"),
 REP_COL_ATTENDANCE_AT_WORK("attendance_at_work"),
-REP_COL_LEAVING_WORK("leaving_work"),
+REP_COL_LEAVING_WORK("leaving_work");
 
 
     private final String text;
