@@ -49,7 +49,6 @@ public class EmployeeConverter {
         if(e == null) {
             return null;
         }
-
         return new EmployeeView(
                 e.getId(),
                 e.getCode(),
@@ -67,6 +66,7 @@ public class EmployeeConverter {
                         : e.getDeleteFlag() == JpaConst.EMP_DEL_TRUE
                                 ? AttributeConst.DEL_FLAG_TRUE.getIntegerValue()
                                 : AttributeConst.DEL_FLAG_FALSE.getIntegerValue());
+
     }
 
     /**

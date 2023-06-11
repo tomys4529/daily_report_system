@@ -26,7 +26,5 @@ public class EmployeeView {
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
     private Integer deleteFlag;
-    private Integer attendanceAtWork;
-    private Integer leavingWork;
 
 }

@@ -109,12 +109,14 @@ public class ReportAction extends ActionBase {
             //パラメータの値をもとに日報情報のインスタンスを作成する
             ReportView rv = new ReportView(
                     null,
-                    ev, //ログインしている従業員を、日報作成者として登録する
-                    day,
-                    getRequestParam(AttributeConst.REP_TITLE),
+                    null,
+                    null,
                     getRequestParam(AttributeConst.REP_CONTENT),
                     null,
-                    null);
+                    day,
+                    getRequestParam(AttributeConst.REP_TITLE),
+                    null,
+                    ev); //ログインしている従業員を、日報作成者として登録する
 
             //日報情報登録
             List<String> errors = service.create(rv);
