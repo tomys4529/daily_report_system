@@ -57,17 +57,23 @@ public class Report {
     private Integer id;
 
     /**
-     * 出勤表示
+     * 日報を登録した従業員
      */
-    @Column(name =JpaConst.REP_COL_ATTENDANCE_AT_WORK, nullable = false)
-    private String attendance_at_work;
+    @ManyToOne
+    @JoinColumn(name = JpaConst.REP_COL_EMP, nullable = false)
+    private Employee employee;
 
     /**
-     * 退勤表示
+     * いつの日報かを示す日付
      */
+    @Column(name = JpaConst.REP_COL_REP_DATE, nullable = false)
+    private LocalDate reportDate;
 
-    @Column(name = JpaConst.REP_COL_LEAVING_WORK, nullable = false)
-    private LocalDate leaving_work;
+    /**
+     * 日報のタイトル
+     */
+    @Column(name = JpaConst.REP_COL_TITLE, length = 255, nullable = false)
+    private String title;
 
     /**
      * 日報の内容
@@ -83,29 +89,9 @@ public class Report {
     private LocalDateTime createdAt;
 
     /**
-     * いつの日報かを示す日付
-     */
-    @Column(name = JpaConst.REP_COL_REP_DATE, nullable = false)
-    private LocalDate reportDate;
-
-
-    /**
-     * 日報のタイトル
-     */
-    @Column(name = JpaConst.REP_COL_TITLE, length = 255, nullable = false)
-    private String title;
-
-
-    /**
      * 更新日時
      */
     @Column(name = JpaConst.REP_COL_UPDATED_AT, nullable = false)
     private LocalDateTime updatedAt;
 
-    /**
-     * 日報を登録した従業員
-     */
-    @ManyToOne
-    @JoinColumn(name = JpaConst.REP_COL_EMP, nullable = false)
-    private Employee employee;
 }

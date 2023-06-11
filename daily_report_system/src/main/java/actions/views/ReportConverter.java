@@ -19,14 +19,12 @@ public class ReportConverter {
     public static Report toModel(ReportView rv) {
         return new Report(
                 rv.getId(),
-                rv.getAttendance_at_work(),
-                rv.getLeaving_work(),
-                rv.getContent(),
-                rv.getCreatedAt(),
+                EmployeeConverter.toModel(rv.getEmployee()),
                 rv.getReportDate(),
                 rv.getTitle(),
-                rv.getUpdatedAt(),
-                EmployeeConverter.toModel(rv.getEmployee()));
+                rv.getContent(),
+                rv.getCreatedAt(),
+                rv.getUpdatedAt());
     }
 
     /**
@@ -42,14 +40,12 @@ public class ReportConverter {
 
         return new ReportView(
                 r.getId(),
-                r.getAttendance_at_work(),
-                r.getLeaving_work(),
-                r.getContent(),
-                r.getCreatedAt(),
+                EmployeeConverter.toView(r.getEmployee()),
                 r.getReportDate(),
                 r.getTitle(),
+                r.getContent(),
+                r.getCreatedAt(),
                 r.getUpdatedAt());
-                EmployeeConverter.toView(r.getEmployee());
     }
 
     /**

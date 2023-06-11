@@ -19,8 +19,7 @@ public class ReportConverter {
     public static Report toModel(ReportView rv) {
         return new Report(
                 rv.getId(),
-                rv.getAttendance_at_work(),
-                rv.getLeaving_work(),
+                rv.getAttendance(),
                 rv.getContent(),
                 rv.getCreatedAt(),
                 rv.getReportDate(),
@@ -42,8 +41,7 @@ public class ReportConverter {
 
         return new ReportView(
                 r.getId(),
-                r.getAttendance_at_work(),
-                r.getLeaving_work(),
+                r.getAttendance(),
                 r.getContent(),
                 r.getCreatedAt(),
                 r.getReportDate(),

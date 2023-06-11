@@ -109,7 +109,6 @@ public class EmployeeAction extends ActionBase {
                     null,
                     AttributeConst.DEL_FLAG_FALSE.getIntegerValue());
 
-
             //アプリケーションスコープからpepper文字列を取得
             String pepper = getContextScope(PropertyConst.PEPPER);
 
@@ -215,8 +214,6 @@ public class EmployeeAction extends ActionBase {
                     null,
                     null,
                     AttributeConst.DEL_FLAG_FALSE.getIntegerValue());
-                    getRequestParam(AttributeConst.REP_COL_ATTENDANCE_AT_WORK);
-                    getRequestParam(AttributeConst.REP_COL_LEAVING_WORK);
 
             //アプリケーションスコープからpepper文字列を取得
             String pepper = getContextScope(PropertyConst.PEPPER);

@@ -8,7 +8,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-
 /**
  * 日報情報について画面の入力値・出力値を扱うViewモデル
  *
@@ -25,25 +24,9 @@ public class ReportView {
     private Integer id;
 
     /**
-     * 出勤時間
+     * 日報を登録した従業員
      */
-    private Integer attendance_at_work;
-
-    /**
-     * 退勤時間
-     */
-
-    private Integer leaving_work;
-
-    /**
-     * 日報の内容
-     */
-    private String content;
-
-    /**
-     * 登録日時
-     */
-    private LocalDateTime createdAt;
+    private EmployeeView employee;
 
     /**
      * いつの日報かを示す日付
@@ -56,12 +39,17 @@ public class ReportView {
     private String title;
 
     /**
+     * 日報の内容
+     */
+    private String content;
+
+    /**
+     * 登録日時
+     */
+    private LocalDateTime createdAt;
+
+    /**
      * 更新日時
      */
     private LocalDateTime updatedAt;
-
-    /**
-     * 日報を登録した従業員
-     */
-    private EmployeeView employee;
 }

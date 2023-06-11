@@ -25,15 +25,9 @@ public class ReportView {
     private Integer id;
 
     /**
-     * 出勤時間
+     * 勤怠管理
      */
-    private Integer attendance_at_work;
-
-    /**
-     * 退勤時間
-     */
-
-    private Integer leaving_work;
+    private Integer attendance;
 
     /**
      * 日報の内容
