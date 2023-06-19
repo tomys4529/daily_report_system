@@ -37,6 +37,15 @@
                     <fmt:parseDate value="${report.updatedAt}" pattern="yyyy-MM-dd'T'HH:mm:ss" var="updateDay" type="date" />
                     <td><fmt:formatDate value="${updateDay}" pattern="yyyy-MM-dd HH:mm:ss" /></td>
                 </tr>
+                <tr>
+                    <th>出勤時間</th>
+                    <td><c:out value="${report.attendance_at_work}" /></td>
+                </tr>
+                <tr>
+                    <th>退勤時間</th>
+                    <td><c:out value="${report.leaving_work}" /></td>
+                </tr>
+
             </tbody>
         </table>
 

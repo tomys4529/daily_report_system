@@ -66,7 +66,7 @@ public class Report {
      * 退勤表示
      */
 
-    @Column(name = JpaConst.REP_COL_LEAVING_WORK, nullable = false)
+    @Column(name = "leaving_work", nullable = false, columnDefinition = "varchar")
     private String leaving_work;
 
     /**

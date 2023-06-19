@@ -30,4 +30,6 @@
 <br /><br />
 <input type="hidden" name="${AttributeConst.REP_ID.getValue()}" value="${report.id}" />
 <input type="hidden" name="${AttributeConst.TOKEN.getValue()}" value="${_token}" />
+<a>出勤時間</a><input type="time" name="${AttributeConst.REP_COL_ATTENDANCE_AT_WORK.getValue()}" value="${attendance_at_work}" />
+<a>退勤時間</a><input type="time" name="${AttributeConst.REP_COL_LEAVING_WORK.getValue()}" value="${leaving_work}" />
 <button type="submit">投稿</button>

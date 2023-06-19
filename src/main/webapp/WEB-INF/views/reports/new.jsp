@@ -12,7 +12,6 @@
 
         <form method="POST" action="<c:url value='?action=${action}&command=${commCrt}' />">
             <c:import url="_form.jsp" />
-                <a>出勤時間</a><input type="time"> <a>退勤時間</a><input type="time">
         </form>
 
 

@@ -74,12 +74,14 @@ public class ReportConverter {
      */
     public static void copyViewToModel(Report r, ReportView rv) {
         r.setId(rv.getId());
-        r.setEmployee(EmployeeConverter.toModel(rv.getEmployee()));
-        r.setReportDate(rv.getReportDate());
-        r.setTitle(rv.getTitle());
+        r.setAttendance_at_work(rv.getAttendance_at_work());
+        r.setLeaving_work(rv.getLeaving_work());
         r.setContent(rv.getContent());
         r.setCreatedAt(rv.getCreatedAt());
+        r.setReportDate(rv.getReportDate());
+        r.setTitle(rv.getTitle());
         r.setUpdatedAt(rv.getUpdatedAt());
+        r.setEmployee(EmployeeConverter.toModel(rv.getEmployee()));
 
     }
 

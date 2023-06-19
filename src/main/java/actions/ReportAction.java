@@ -109,8 +109,8 @@ public class ReportAction extends ActionBase {
             //パラメータの値をもとに日報情報のインスタンスを作成する
             ReportView rv = new ReportView(
                     null,
-                    null,
-                    null,
+                    getRequestParam(AttributeConst.REP_COL_ATTENDANCE_AT_WORK),
+                    getRequestParam(AttributeConst.REP_COL_LEAVING_WORK),
                     getRequestParam(AttributeConst.REP_CONTENT),
                     null,
                     day,
