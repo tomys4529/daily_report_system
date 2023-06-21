@@ -212,6 +212,8 @@ public class ReportAction extends ActionBase {
             rv.setReportDate(toLocalDate(getRequestParam(AttributeConst.REP_DATE)));
             rv.setTitle(getRequestParam(AttributeConst.REP_TITLE));
             rv.setContent(getRequestParam(AttributeConst.REP_CONTENT));
+            rv.setAttendance_at_work(getRequestParam(AttributeConst.REP_COL_ATTENDANCE_AT_WORK));
+            rv.setLeaving_work(getRequestParam(AttributeConst.REP_COL_LEAVING_WORK));
 
             //日報データを更新する
             List<String> errors = service.update(rv);
